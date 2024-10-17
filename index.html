@@ -3,169 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Previous Year Papers Download</title>
+    <title>Study Materials</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f5f7fa;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f8f9fa; /* Light background for the whole page */
+            color: #333; /* Set text color to black */
+            text-align: center;
         }
         h1 {
-            text-align: center;
-            color: #333;
-            margin-top: 20px;
-            font-size: 2.5rem;
+            font-size: 2.5em; /* Increased size for more prominence */
+            margin: 20px 0; /* Added margin for spacing */
+            font-weight: bold; /* Made the heading bold */
+            color: #007bff; /* Blue color for the heading */
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .subject {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .subject:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-        }
-        .subject h2 {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-        .papers ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .papers li {
+        h2 {
+            font-size: 1.2em;
             margin: 10px 0;
+            color: #b0b3b8;
         }
-        .papers a {
+        .logo {
+            width: 200px; /* Make the logo larger */
+            margin: 20px 0; /* Add margin for spacing */
+        }
+        .button {
+            display: block; /* Change to block for vertical stacking */
+            background-color: #007bff; /* Blue button background */
+            color: white;
+            padding: 12px 25px;
+            font-size: 1em;
+            margin: 15px auto; /* Center the buttons */
+            width: 80%; /* Set a width for consistency */
+            max-width: 300px; /* Set a maximum width */
+            border: none;
+            border-radius: 4px;
             text-decoration: none;
-            color: #3498db;
-            font-size: 1.1rem;
-            font-weight: bold;
-            display: inline-block;
-            padding: 8px 12px;
-            border-radius: 5px;
-            background-color: #ecf0f1;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s;
+            cursor: pointer;
         }
-        .papers a:hover {
-            background-color: #3498db;
-            color: #fff;
+        .button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
         }
-        /* Credits Section */
-        .credits {
-            text-align: center;
+        footer {
             margin-top: 40px;
-            padding: 10px;
-            background-color: #36454F;
-            color: #ecf0f1;
+            font-size: 0.9em;
         }
-        .credits a {
-            color: #3498db;
+        .created-by {
+            font-size: 1.2em; /* Larger text for Created By */
+            color: #000; /* Black color */
+            margin: 5px 0; /* Reduced margin for closer spacing */
+            font-weight: bold; /* Make it bold */
+        }
+        .sponsored-by {
+            font-size: 1em; /* Regular text size for Sponsored By */
+            color: #666; /* Lighter color */
+            margin: 5px 0; /* Reduced margin for closer spacing */
+            font-weight: bold; /* Make it bold */
+        }
+        .about-btn {
+            display: inline-block;
+            margin-top: 0px; /* Reduced margin for closer spacing */
+            padding: 8px 16px;
+            background-color: #6c757d; /* Gray button for About Us */
+            color: white;
+            border: none;
+            border-radius: 4px;
             text-decoration: none;
+            transition: background-color 0.3s;
         }
-        .credits a:hover {
-            text-decoration: underline;
+        .about-btn:hover {
+            background-color: #5a6268; /* Darker gray on hover */
         }
-        /* Responsive Design */
-        @media screen and (max-width: 768px) {
+        @media (max-width: 600px) {
             h1 {
-                font-size: 2rem;
+                font-size: 1.8em; /* Adjusted size for mobile */
             }
-            .subject h2 {
-                font-size: 1.5rem;
+            h2 {
+                font-size: 1em;
             }
-            .papers a {
-                font-size: 1rem;
-            }
-        }
-        @media screen and (max-width: 480px) {
-            h1 {
-                font-size: 1.8rem;
-            }
-            .subject h2 {
-                font-size: 1.2rem;
-            }
-            .papers a {
-                font-size: 0.9rem;
-                padding: 6px 10px;
+            .button, .about-btn {
+                font-size: 0.9em;
+                padding: 10px 20px;
             }
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Download Previous Year Prelims Exam Papers of Horizon Academy CBSE Grade-X</h1>
-
-        <div class="subject">
-            <h2>English</h2>
-            <div class="papers">
-                <ul>
-                    <li><a href="pdfs/english/paper1.pdf" download>English Paper 1</a></li>
-                    <li><a href="pdfs/english/paper2.pdf" download>English Paper 2</a></li>
-                    <li><a href="pdfs/english/paper3.pdf" download>English Paper 3</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="subject">
-            <h2>Maths</h2>
-            <div class="papers">
-                <ul>
-                    <li><a href="pdfs/maths/paper1.pdf" download>Maths Paper 1</a></li>
-                    <li><a href="pdfs/maths/paper2.pdf" download>Maths Paper 2</a></li>
-                    <li><a href="pdfs/maths/paper3.pdf" download>Maths Paper 3</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="subject">
-            <h2>Science</h2>
-            <div class="papers">
-                <ul>
-                    <li><a href="pdfs/science/paper1.pdf" download>Science Paper 1</a></li>
-                    <li><a href="pdfs/science/paper2.pdf" download>Science Paper 2</a></li>
-                    <li><a href="pdfs/science/paper3.pdf" download>Science Paper 3</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="subject">
-            <h2>Social Science</h2>
-            <div class="papers">
-                <ul>
-                    <li><a href="pdfs/social-science/paper1.pdf" download>Social Science Paper 1</a></li>
-                    <li><a href="pdfs/social-science/paper2.pdf" download>Social Science Paper 2</a></li>
-                    <li><a href="pdfs/social-science/paper3.pdf" download>Social Science Paper 3</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="subject">
-            <h2>Marathi</h2>
-            <div class="papers">
-                <ul>
-                    <li><a href="pdfs/marathi/paper1.pdf" download>Marathi Paper 1</a></li>
-                    <li><a href="pdfs/marathi/paper2.pdf" download>Marathi Paper 2</a></li>
-                    <li><a href="pdfs/marathi/paper3.pdf" download>Marathi Paper 3</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="credits">
-            <p>Website developed by <a href="https://www.instagram.com/darealarnav" target="_blank">Arnav Thete</a> in collaboration with Pranav Ghaywat</p>
-        </div>
-    </div>
-
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/CBSE_new_logo.svg/1200px-CBSE_new_logo.svg.png" alt="CBSE Logo" class="logo">
+        <h2>Download Your Required Papers Easily!</h2>
+    </header>
+    <main>
+        <p class="created-by">Website Created by <strong>Arnav Thete</strong></p>
+        <p class="sponsored-by">Sponsored by <strong>Pranav Ghaywat</strong></p>
+        <a href="https://prelims.rf.gd/prelims.html" class="button">DOWNLOAD PRELIMS PAPERS</a>
+        <a href="https://prelims.rf.gd/boards.html" class="button">DOWNLOAD BOARDS 2024 PAPERS</a>
+        <a href="https://prelims.rf.gd/sqp.html" class="button">DOWNLOAD SAMPLE QUESTION PAPERS 2025 BY NCERT</a>
+    </main>
+    <footer>
+        <a href="https://prelims.rf.gd/about.html" class="about-btn">About Us</a>
+    </footer>
 </body>
 </html>
