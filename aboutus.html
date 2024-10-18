@@ -39,6 +39,24 @@
             color: #3498db;
         }
 
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #3498db; /* Button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .back-btn:hover {
+            background-color: #2980b9; /* Darker blue on hover */
+        }
+
         /* Responsive Design */
         @media screen and (max-width: 768px) {
             .container {
@@ -52,6 +70,11 @@
 
             p {
                 font-size: 1.1rem;
+            }
+
+            .back-btn {
+                font-size: 1rem;
+                padding: 10px 20px;
             }
         }
 
@@ -67,6 +90,11 @@
 
             p {
                 font-size: 1rem;
+            }
+
+            .back-btn {
+                font-size: 0.9rem;
+                padding: 8px 16px;
             }
         }
     </style>
@@ -84,6 +112,9 @@
         <p>
             Our aim is to make exam resources easily accessible to aid students in their practice. This initiative operates under fair use, aligning with school regulations and serving solely to support academic preparation.
         </p>
+
+        <!-- Back to Main button -->
+        <a href="https://papervault.github.io/main" class="back-btn">Back to Main</a>
     </div>
 
 </body>
