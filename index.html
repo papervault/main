@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Paper Vault</title>
+    <style>
+        /* Overall Layout and Colors */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #007bff, #00b3e6);
+            color: white;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Created by and Sponsored by */
+        .created-by {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .sponsored-by {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #666;
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-block;
+            background-color: #007bff; /* Default color */
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.1em;
+            margin: 10px 0; /* Adjusted margin for better stacking */
+            width: calc(100% - 60px); /* Full width minus margin */
+            max-width: 300px;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        /* Specific button colors */
+        .about-btn {
+            background-color: #6c757d; /* Default color */
+        }
+
+        .about-btn:hover {
+            background-color: #5a6268; /* Darker on hover */
+        }
+
+        .feedback-btn {
+            background-color: red; /* Red color */
+        }
+
+        .feedback-btn:hover {
+            background-color: #cc0000; /* Darker on hover */
+        }
+
+        .why-btn {
+            background-color: green; /* Green color */
+        }
+
+        .why-btn:hover {
+            background-color: #006600; /* Darker on hover */
+        }
+
+        /* Popup and Modals */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .popup h2 {
+            margin: 0 0 20px;
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        .popup-content p {
+            color: #555;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .close-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding: 30px 0;
+        }
+
+        .footer-content {
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .footer-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /* Smaller buttons for About Us, Why Use This Website, and Got an Issue */
+        .footer-content .button {
+            font-size: 0.8em; /* Smaller font size */
+            padding: 10px 15px; /* Smaller padding */
+        }
+
+        /* Additional Spacing Below Footer */
+        .extra-space {
+            height: 3em;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em; /* Reduced font size for smaller screens */
+            }
+
+            .button {
+                font-size: 1em; /* Smaller font size for buttons */
+                padding: 12px 20px; /* Smaller padding for buttons */
+            }
+
+            .popup-content {
+                width: 90%; /* Ensures popup is not too wide */
+            }
+
+            .footer-content {
+                font-size: 0.8em; /* Smaller footer font size on mobile */
+            }
+
+            /* Adjusting the size of buttons in popup */
+            .popup-content .feedback-btn {
+                font-size: 1em;
+                padding: 12px 25px; /* Increased padding for better touch interaction */
+                border-radius: 50px; /* Make button round */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/CBSE_new_logo.svg/1200px-CBSE_new_logo.svg.png" alt="CBSE Logo" class="logo">
+            <h1>The Paper Vault</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <p class="created-by">Website Created by Arnav Thete</p>
+        <p class="sponsored-by">Sponsored by Pranav Ghaywat</p>
+
+        <a href="prelims.html" class="button">DOWNLOAD PREVIOUS YEAR <b>PRELIMINARY  PAPERS</b></a>
+        <a href="boards.html" class="button">DOWNLOAD <b>BOARDS 2024 PAPERS</b></a>
+        <a href="sqp.html" class="button">DOWNLOAD <b>SAMPLE QUESTION PAPERS</b> 2025 BY NCERT</a>
+
+        <footer>
+            <div class="footer-content">
+                <p class="footer-name">The Paper Vault</p>
+                <a href="aboutus.html" class="button about-btn">About Us & About Website</a>
+                <a href="#" class="button why-btn" onclick="openPopup()">Why You Should Use This Website?</a>
+                <a href="#" class="button feedback-btn" onclick="openFeedbackPopup()">Got an Issue? Report/Feedback here!</a>
+            </div>
+        </footer>
+
+        <!-- Blank space for footer area -->
+        <div class="extra-space"></div>
+
+    </main>
+
+    <!-- Why Use Pop-up -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Why Use This Website?</h2>
+            <p>The official CBSE site does not offer access to last year's preliminary exam papers, and the process of downloading previous year question papers (PYQPs) is cumbersome. Our site allows for direct PDF downloads, simplifying the process. We also provide exclusive access to preliminary exam papers that are not available anywhere else on the internet, making our platform a unique and valuable resource.</p>
+            <button class="close-btn" onclick="closePopup()">Back</button>
+        </div>
+    </div>
+
+    <!-- Feedback Pop-up -->
+    <div class="popup" id="feedbackPopup">
+        <div class="popup-content">
+            <h2>Got an Issue?</h2>
+            <p>If you have any suggestions, feedback, or want to report an issue, please fill out this short form. Click the button below to go to the feedback section.</p>
+            <a href="https://papervault.github.io/feedback/" class="button feedback-btn">Feedback/Report Issue</a>
+            <button class="close-btn" onclick="closeFeedbackPopup()">Back</button>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById("popup").style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+
+        function openFeedbackPopup() {
+            document.getElementById("feedbackPopup").style.display = "flex";
+        }
+
+        function closeFeedbackPopup() {
+            document.getElementById("feedbackPopup").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
