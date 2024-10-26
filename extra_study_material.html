@@ -68,6 +68,17 @@
             color: #0066cc;
         }
 
+        .disabled {
+            pointer-events: none;
+            opacity: 0.6; /* Make disabled buttons appear faded */
+        }
+
+        .message {
+            color: red;
+            font-size: 0.8em; /* Smaller font for the message */
+            text-align: center;
+        }
+
         /* Responsive Design */
         @media (max-width: 600px) {
             h1 {
@@ -83,6 +94,69 @@
                 font-size: 2.5em;
             }
         }
+
+        .collaborate-btn {
+            margin: 10px 0; /* Added margin at the bottom for spacing */
+            background-color: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 15px 30px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .collaborate-btn:hover {
+            background-color: #004c99;
+        }
+
+        /* Popup Styling */
+        .popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .popup-content h2 {
+            margin-bottom: 15px;
+        }
+
+        .popup-content p {
+            margin: 0 0 15px; /* Adjusted margin for better spacing */
+        }
+
+        .close-popup {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin-top: 15px; /* Margin for spacing */
+        }
+
+        /* Added spacing for the Send Email button */
+        .send-email {
+            margin: 10px 0; /* Adjusted top and bottom margin for spacing */
+        }
     </style>
 </head>
 <body>
@@ -90,25 +164,66 @@
     <!-- Main Heading -->
     <h1>Extra Study Materials</h1>
 
+    <!-- Collaborate Button -->
+    <button class="collaborate-btn" id="collaborateBtn">Want to collaborate/Submit study material?</button>
+
     <!-- Subject Folder Buttons -->
     <div class="subject-container">
         <a href="ssesm.html" class="folder-btn">
             <i class="fas fa-folder"></i>
             Social Science
         </a>
-        <a href="sciesm.html" class="folder-btn">
+        <a class="folder-btn disabled">
             <i class="fas fa-folder"></i>
             Science
+            <div class="message">No submissions yet!</div>
         </a>
-        <a href="matesm.html" class="folder-btn">
+        <a class="folder-btn disabled">
             <i class="fas fa-folder"></i>
             Maths
+            <div class="message">No submissions yet!</div>
         </a>
-        <a href="engesm.html" class="folder-btn">
+        <a class="folder-btn disabled">
             <i class="fas fa-folder"></i>
             English
+            <div class="message">No submissions yet!</div>
         </a>
     </div>
+
+    <!-- Popup for Collaboration -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h2>Do you want to submit study resources and collaborate?</h2>
+            <p>Please email me if you wish to collaborate and include the subject or topic name in the email. You can expect a response within one business day. All emails will be prioritized and replied to promptly.</p>
+            <p>Email: <strong>arnavthete16@gmail.com</strong></p> <!-- Moved the email text above the button -->
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=arnavthete16@gmail.com" target="_blank" class="collaborate-btn send-email">Send Email</a>
+            <button class="close-popup">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Get popup and button elements
+        const popup = document.getElementById('popup');
+        const collaborateBtn = document.getElementById('collaborateBtn');
+        const closePopup = document.querySelector('.close-popup');
+
+        // Show popup when the collaborate button is clicked
+        collaborateBtn.addEventListener('click', () => {
+            popup.style.display = 'flex';
+        });
+
+        // Close the popup
+        closePopup.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+
+        // Close the popup when clicking outside of it
+        window.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 </html>
