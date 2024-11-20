@@ -6,60 +6,49 @@
     <title>Social Science Extra Study Material</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* General Reset */
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
-        /* Body Styling */
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #e9f5ff; /* Light background color */
+            background-color: #e9f5ff;
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column; /* Centering content vertically */
-            height: 100vh; /* Full viewport height */
+            flex-direction: column;
+            min-height: 100vh;
             color: #333;
-            text-align: center; /* Centering text */
+            text-align: center;
+            padding: 20px;
         }
-
-        /* Main Container */
         .container {
-            background-color: #ffffff; /* White background for the card */
+            background-color: #ffffff;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             padding: 20px;
             width: 90%;
-            max-width: 400px; /* Maximum width for the card */
-            margin: 20px; /* Margin for spacing */
+            max-width: 400px;
+            margin: 20px;
         }
-
-        /* Heading Styling */
         h1 {
             font-size: 2em;
-            color: #0066cc; /* Primary Color */
+            color: #0066cc;
             margin-bottom: 20px;
             font-weight: 700;
         }
-
-        /* Detail Text Styling */
         .details {
             font-size: 1em;
-            margin-bottom: 20px; /* Space between details and button */
-            line-height: 1.5; /* Spacing between lines */
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
-
         .details span {
-            font-weight: bold; /* Bold text for labels */
-            color: #005bb5; /* Lighter color for labels */
+            font-weight: bold;
+            color: #005bb5;
         }
-
-        /* Button Styling */
         .download-btn {
-            background-color: #0066cc; /* Button Background Color */
+            background-color: #0066cc;
             border: none;
             border-radius: 5px;
             padding: 12px 20px;
@@ -68,49 +57,48 @@
             text-decoration: none;
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.2s ease;
-            margin-bottom: 15px; /* Space between button and topic */
-            display: inline-block; /* Inline-block for button */
-            width: 100%; /* Full width for button */
+            margin-bottom: 15px;
+            display: inline-block;
+            width: 100%;
         }
-
         .download-btn:hover {
-            background-color: #005bb5; /* Darker Shade on Hover */
-            transform: translateY(-2px); /* Slight lift effect */
+            background-color: #005bb5;
+            transform: translateY(-2px);
         }
-
-        /* Topic Styling */
         .topic {
             font-size: 1.2em;
-            font-weight: bold; /* Bold for the topic */
-            color: #333; /* Color for the topic text */
+            font-weight: bold;
+            color: #333;
         }
-
-        /* Responsive Design */
         @media (max-width: 600px) {
             h1 {
-                font-size: 1.5em; /* Smaller heading for mobile */
+                font-size: 1.5em;
             }
             .download-btn {
-                padding: 10px; /* Adjust padding for smaller screens */
+                padding: 10px;
             }
         }
     </style>
 </head>
 <body>
-
-    <h1>Social Science Extra Study Material</h1> <!-- Main Heading for the webpage -->
+    <h1>Social Science Extra Study Material</h1>
     
-    <!-- Main Container -->
     <div class="container">
         <div class="details">
             <span>Submitted By:</span> Manas Tiwari<br>
             <span>Subject:</span> Social Science<br>
             <span>Topic:</span> Cartoon And Image Based QnA
         </div>
-        
         <a href="submissions/sscartoonstudy.pdf" class="download-btn" download>Download PDF</a>
-        
     </div>
 
+    <div class="container">
+        <div class="details">
+            <span>Submitted By:</span> Arnav Thete<br>
+            <span>Subject:</span> Social Science<br>
+            <span>Topic:</span> SS ALL MAPS
+        </div>
+        <a href="submissions/ssallmaps.pdf" class="download-btn" download>Download PDF</a>
+    </div>
 </body>
 </html>
