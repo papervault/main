@@ -4,95 +4,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CBSE 2025 Datesheet</title>
+    <title>CBSE Datesheet 2025</title>
     <style>
-        /* General Styling */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            background-color: #f0f4f8;
             color: #333;
             text-align: center;
         }
 
+        header {
+            background: linear-gradient(135deg, #007bff, #00b3e6);
+            color: white;
+            padding: 20px 0;
+        }
+
         .container {
             width: 90%;
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 15px;
         }
 
         h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            color: #007bff;
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
         }
 
-        p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        /* Flashing "Important" text */
         .important {
-            color: red;
             font-size: 1.5em;
             font-weight: bold;
-            animation: flash 1s infinite;
+            color: red;
+            animation: blink 1s infinite;
+            margin-bottom: 15px;
         }
 
-        @keyframes flash {
-            0%, 50% {
+        @keyframes blink {
+            0%, 100% {
                 opacity: 1;
             }
-            100% {
+
+            50% {
                 opacity: 0;
             }
         }
 
-        /* Flashing "New" text */
-        .new {
-            color: green;
-            font-size: 1em;
+        h2 {
+            font-size: 2.2em;
+            margin: 10px 0 20px;
             font-weight: bold;
-            animation: flash 1.5s infinite;
         }
 
-        /* Download Button */
         .download-btn {
             display: inline-block;
-            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
             padding: 15px 30px;
             font-size: 1.2em;
-            color: white;
-            background-color: #007bff;
-            text-decoration: none;
+            margin-top: 20px;
             border-radius: 30px;
+            text-decoration: none;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .download-btn:hover {
             background-color: #0056b3;
-            box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.5);
+            box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .download-now {
+            font-size: 1.1em;
+            color: #333;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .download-btn {
+                font-size: 1em;
+                padding: 12px 24px;
+            }
+
+            .back-btn {
+                font-size: 1em;
+                padding: 8px 16px;
+            }
+
+            .important {
+                font-size: 1.3em;
+            }
+
+            .logo {
+                width: 120px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <!-- Flashing "Important" text -->
-        <div class="important">!! IMPORTANT !!</div>
+    <header>
+        <div class="container">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/CBSE_new_logo.svg/1200px-CBSE_new_logo.svg.png" alt="CBSE Logo" class="logo">
+            <h1>The Paper Vault</h1>
+        </div>
+    </header>
 
-        <!-- Main Heading -->
-        <h1>CBSE 2025 DATESHEET OUT</h1>
+    <main class="container">
+        <p class="important">IMPORTANT</p>
+        <h2>CBSE 2025 DATESHEET OUT</h2>
+        <a href="datesheet2025.pdf" download="CBSE_2025_Datesheet" class="download-btn">Download Datesheet 2025</a>
+        <p class="download-now">(DOWNLOAD NOW)</p>
+    </main>
 
-        <!-- Download Button -->
-        <a href="datesheet2025.pdf" download class="download-btn">Download Datesheet 2025</a>
-
-
-        <!-- Flashing "New" text -->
-        <p class="new">(DOWNLOAD NOW)</p>
-    </div>
+    <footer>
+        <p>Website Created by Arnav Thete | Sponsored by Pranav Ghaywat</p>
+        <a href="https://papervault.github.io/main/" class="back-btn">Back to Main Page</a>
+    </footer>
 </body>
 
 </html>
