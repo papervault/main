@@ -104,6 +104,16 @@
             background-color: #006600; /* Darker on hover */
         }
 
+        /* Flashing NEW animation */
+        @keyframes flash {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
         /* Popup and Modals */
         .popup {
             display: none;
@@ -224,7 +234,15 @@
         <p class="created-by">Website Created by Arnav Thete</p>
         <p class="sponsored-by">Sponsored by Pranav Ghaywat</p>
 
-        <a href="datesheet.html" class="button">CBSE <b>DATESHEET</b> 2025</a>
+        <a href="datesheet.html" class="button">
+            CBSE <b>TIMETABLE/DATESHEET</b> 2025
+            <span style="
+                display: block;
+                font-size: 0.8em;
+                color: red;
+                animation: flash 1s infinite;
+            ">(NEW)</span>
+        </a>
         <a href="prelims.html" class="button">DOWNLOAD PREVIOUS YEAR <b>PRELIMINARY PAPERS</b></a>
         <a href="boards.html" class="button">DOWNLOAD <b>BOARDS PREVIOUS ACADEMIC YEAR 2024 PAPERS</b></a>
         <a href="sqp.html" class="button">DOWNLOAD <b>SAMPLE QUESTION PAPERS</b> 2025 BY NCERT</a>
@@ -258,26 +276,22 @@
         <div class="popup-content">
             <h2>Got an Issue?</h2>
             <p>If you have any suggestions, feedback, or want to report an issue, please fill out this short form. Click the button below to go to the feedback section.</p>
-            <a href="https://papervaultform_ernav.now.sh" target="_blank" class="button feedback-btn">Feedback Form</a>
-            <button class="close-btn" onclick="closeFeedbackPopup()">Back</button>
+            <a href="feedbackform.html" class="feedback-btn">Give Feedback</a>
         </div>
     </div>
 
     <script>
+        // Popup handlers
         function openPopup() {
-            document.getElementById('popup').style.display = 'flex';
+            document.getElementById("popup").style.display = "flex";
         }
 
         function closePopup() {
-            document.getElementById('popup').style.display = 'none';
+            document.getElementById("popup").style.display = "none";
         }
 
         function openFeedbackPopup() {
-            document.getElementById('feedbackPopup').style.display = 'flex';
-        }
-
-        function closeFeedbackPopup() {
-            document.getElementById('feedbackPopup').style.display = 'none';
+            document.getElementById("feedbackPopup").style.display = "flex";
         }
     </script>
 </body>
