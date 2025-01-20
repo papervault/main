@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download PYQs (8 YEARS)</title>
+    <style>
+        /* Overall Layout */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f7fa;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: linear-gradient(135deg, #007bff, #00b3e6);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .logo {
+            width: 150px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        /* Drop-down menu */
+        select,
+        option {
+            padding: 10px;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            width: 100%;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        /* Buttons */
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            font-size: 1.1em;
+            margin: 10px 0;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Warning Note */
+        .warning-note {
+            background-color: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+
+        .warning-note i {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            padding: 20px 0;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+        }
+
+        .footer-content {
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/CBSE_new_logo.svg/1200px-CBSE_new_logo.svg.png" alt="CBSE Logo" class="logo">
+            <h1>Download Previous Year Question Papers (PYQs)</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Warning Note -->
+        <div class="warning-note">
+            <i class="fas fa-exclamation-circle"></i>
+            <span><strong>Note:</strong> These are previous years' question papers from the past 8 years. The CBSE syllabus has undergone significant changes since then. Please practice questions that are still relevant to the 2025 CBSE syllabus and do not get confused by outdated content. Papers for the year 2019 and 2021 are not available.</span>
+        </div>
+
+        <p>Select the subject and year to download the corresponding set of previous year question papers.</p>
+
+        <!-- Subject Selection -->
+        <label for="subject">Select Subject</label>
+        <select id="subject" onchange="updateDownloadLinks()">
+            <option value="maths">Mathematics Standard</option>
+            <option value="english">English Literature & Language</option>
+            <option value="science">Science</option>
+            <option value="socialscience">Social Science</option>
+            <option value="hindi">Hindi B</option>
+            <option value="marathi">Marathi</option>
+            <option value="it">Information Technology</option>
+        </select>
+
+        <!-- Year Selection -->
+        <label for="year">Select Year</label>
+        <select id="year" onchange="updateDownloadLinks()">
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2020">2020</option>
+            <option value="2018">2018</option>
+            <option value="2017">2017</option>
+            <option value="2016">2016</option>
+            <option value="2015">2015</option>
+        </select>
+
+        <!-- Download Links -->
+        <div id="download-links">
+            <button class="button" id="set1" onclick="downloadFile(1)">Set 1</button>
+            <button class="button" id="set2" onclick="downloadFile(2)">Set 2</button>
+            <button class="button" id="set3" onclick="downloadFile(3)">Set 3</button>
+            <button class="button" id="set4" onclick="downloadFile(4)">Set 4</button>
+            <button class="button" id="set5" onclick="downloadFile(5)">Set 5</button>
+            <span id="exam-status"></span>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Website Created by Arnav Thete | Sponsored by Pranav Ghaywat</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to update the download links based on the selected subject and year
+        function updateDownloadLinks() {
+            const subject = document.getElementById("subject").value;
+            const year = document.getElementById("year").value;
+
+            // Hide all buttons initially
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById(`set${i}`).style.display = 'none';
+            }
+            document.getElementById("exam-status").innerText = '';
+
+            // Show buttons based on available sets for the selected year and subject
+            if (year === '2015') {
+                if (subject === 'it' || subject === 'marathi') {
+                    document.getElementById("exam-status").innerText = 'No exam conducted';
+                } else {
+                    for (let i = 1; i <= 3; i++) {
+                        document.getElementById(`set${i}`).style.display = 'inline-block';
+                    }
+                }
+            } else if (['2016', '2017', '2018'].includes(year)) {
+                if (subject === 'it' || subject === 'marathi') {
+                    for (let i = 1; i <= 1; i++) {
+                        document.getElementById(`set${i}`).style.display = 'inline-block';
+                    }
+                } else {
+                    for (let i = 1; i <= 3; i++) {
+                        document.getElementById(`set${i}`).style.display = 'inline-block';
+                    }
+                }
+            } else if (year === '2020' || year === '2023' || year === '2024') {
+                if (subject === 'it' || subject === 'marathi') {
+                    for (let i = 1; i <= 1; i++) {
+                        document.getElementById(`set${i}`).style.display = 'inline-block';
+                    }
+                } else {
+                    for (let i = 1; i <= 5; i++) {
+                        document.getElementById(`set${i}`).style.display = 'inline-block';
+                    }
+                }
+            } else if (year === '2022') {
+                if (subject === 'it' || subject === 'marathi') {
+                    for (let i = 1; i <= 1; i++) {
+                        document.getElementById(`set${i}`).style.display = 'inline-block';
+                    }
+                } else {
+                    for (let i = 1; i <= 4; i++) {
+                        document.getElementById(`set${i}`).style.display = 'inline-block';
+                    }
+                }
+            }
+        }
+
+        // Function to handle file download when a set button is clicked
+        function downloadFile(set) {
+            const subject = document.getElementById("subject").value;
+            const year = document.getElementById("year").value;
+
+            // Construct the filename based on the selected subject, year, and set number
+            const fileName = `${subject}_${year}_${set}.pdf`;
+
+            // Construct the download path
+            const filePath = `pdfsb/${fileName}`;
+
+            // Create a temporary link element to trigger the download
+            const link = document.createElement('a');
+            link.href = filePath;
+            link.download = fileName; // This ensures the file will be downloaded
+            document.body.appendChild(link); // Append the link to the body
+            link.click(); // Programmatically click the link to trigger download
+            document.body.removeChild(link); // Remove the link after clicking to keep the DOM clean
+        }
+
+        // Initialize the links on page load
+        window.onload = updateDownloadLinks;
+    </script>
+
+</body>
+
+</html>
