@@ -2,146 +2,181 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Paper Vault</title>
-    <style>
-        /* Overall Layout and Colors */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f4f8;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Paper Vault</title>
+  <style>
+    /* Overall Layout and Colors */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        header {
-            background: linear-gradient(135deg, #007bff, #00b3e6);
-            color: white;
-            padding: 20px 0;
-        }
+    header {
+      background: linear-gradient(135deg, #007bff, #00b3e6);
+      color: white;
+      padding: 20px 0;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-        .logo {
-            width: 150px;
-            margin-bottom: 15px;
-        }
+    .logo {
+      width: 150px;
+      margin-bottom: 15px;
+    }
 
-        h1 {
-            font-size: 2.5em;
-            margin: 0;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+    h1 {
+      font-size: 2.5em;
+      margin: 0;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
 
-        /* Created by and Sponsored by */
-        .created-by {
-            font-size: 1.3em;
-            margin-bottom: 5px;
-            color: #333;
-            font-weight: bold;
-        }
+    /* Created by and Sponsored by */
+    .created-by {
+      font-size: 1.3em;
+      margin-bottom: 5px;
+      color: #333;
+      font-weight: bold;
+    }
 
-        .sponsored-by {
-            font-size: 1.1em;
-            margin-bottom: 30px;
-            color: #666;
-        }
+    .sponsored-by {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+      color: #666;
+    }
 
-        /* Buttons */
-        .button {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            padding: 15px 20px;
-            font-size: 1.1em;
-            margin: 10px 0;
-            width: calc(100% - 60px);
-            max-width: 300px;
-            border: none;
-            border-radius: 50px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
+    /* Buttons */
+    .button {
+      display: inline-block;
+      background-color: #007bff;
+      color: white;
+      padding: 15px 20px;
+      font-size: 1.1em;
+      margin: 10px 0;
+      width: calc(100% - 60px);
+      max-width: 300px;
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
 
-        .button:hover {
-            background-color: #0056b3;
-            box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.3);
-        }
+    .button:hover {
+      background-color: #0056b3;
+      box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.3);
+    }
 
-        /* Footer */
-        footer {
-            margin-top: auto;
-            padding: 30px 0;
-        }
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 30px 0;
+    }
 
-        .footer-content {
-            text-align: center;
-            font-size: 0.9em;
-        }
+    .footer-content {
+      text-align: center;
+      font-size: 0.9em;
+    }
 
-        .footer-name {
-            font-size: 1.4em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+    .footer-name {
+      font-size: 1.4em;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-        /* Additional Spacing Below Footer */
-        .extra-space {
-            height: 3em;
-        }
-    </style>
-    <script>
-        function openFeedbackPopup() {
-            window.location.href = 'https://papervault.github.io/feedback';
-        }
-    </script>
+    /* Additional Spacing Below Footer */
+    .extra-space {
+      height: 3em;
+    }
+
+    /* New Version Button (Eye-catching Red) */
+    .new-version-button {
+      display: inline-block;
+      background-color: #ff3b3b;
+      color: white;
+      padding: 14px 20px;
+      font-size: 1.1em;
+      font-weight: bold;
+      margin: 20px auto;
+      width: calc(100% - 40px);
+      max-width: 350px;
+      border: none;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .new-version-button:hover {
+      background-color: #cc0000;
+      box-shadow: 0px 4px 12px rgba(255, 59, 59, 0.4);
+    }
+  </style>
+  <script>
+    function openFeedbackPopup() {
+      window.location.href = 'https://papervault.github.io/feedback';
+    }
+  </script>
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/CBSE_new_logo.svg/1200px-CBSE_new_logo.svg.png" alt="CBSE Logo" class="logo">
-            <h1>The Paper Vault</h1>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/CBSE_new_logo.svg/1200px-CBSE_new_logo.svg.png" alt="CBSE Logo" class="logo">
+      <h1>The Paper Vault</h1>
+    </div>
+  </header>
 
-    <main class="container">
-        <p class="created-by">Website Created by Arnav Thete</p>
-        <p class="sponsored-by">Sponsored by Pranav Ghaywat</p>
+  <!-- NEW VERSION BUTTON - TOP -->
+  <div class="container">
+    <a href="https://papervault.github.io/vault/" class="new-version-button">
+      🚀 Go to New Version of Paper Vault (Updated for CBSE 2025-26)
+    </a>
+  </div>
 
-        <a href="pyqs.html" class="button">DOWNLOAD <b>Previous Year Question Papers (8 YEARS PYQ)</b></a>
-        <a href="datesheet.html" class="button">DOWNLOAD <b>TIMETABLE/DATESHEET</b> 2025</a>
-        <a href="prelims.html" class="button">DOWNLOAD PREVIOUS YEAR <b>PRELIMINARY PAPERS</b></a>
-        <a href="sqp.html" class="button">DOWNLOAD <b>SAMPLE QUESTION PAPERS</b> 2025 BY NCERT</a>
-        
-        <a href="sci-notes-by-ss.html" class="button">
-            <b>Science Handwritten Notes</b><br>
-            <span style="font-size: 0.8em;">(by Sarthak Sonawane)</span>
-        </a>
-        
-        <a href="extra_study_material.html" class="button">EXTRA <b>STUDY MATERIALS</b> (submitted via collaborations)</a>
+  <main class="container">
+    <p class="created-by">Website Created by Arnav Thete</p>
+    <p class="sponsored-by">Sponsored by Pranav Ghaywat</p>
 
-        <footer>
-            <div class="footer-content">
-                <p class="footer-name">The Paper Vault</p>
-                <a href="aboutus.html" class="button about-btn">About Us & About Website</a>
-                <a href="#" class="button feedback-btn" onclick="openFeedbackPopup()">Got an Issue? Report/Feedback here!</a>
-            </div>
-        </footer>
+    <a href="pyqs.html" class="button">DOWNLOAD <b>Previous Year Question Papers (8 YEARS PYQ)</b></a>
+    <a href="datesheet.html" class="button">DOWNLOAD <b>TIMETABLE/DATESHEET</b> 2025</a>
+    <a href="prelims.html" class="button">DOWNLOAD PREVIOUS YEAR <b>PRELIMINARY PAPERS</b></a>
+    <a href="sqp.html" class="button">DOWNLOAD <b>SAMPLE QUESTION PAPERS</b> 2025 BY NCERT</a>
 
-        <div class="extra-space"></div>
-    </main>
+    <a href="sci-notes-by-ss.html" class="button">
+      <b>Science Handwritten Notes</b><br>
+      <span style="font-size: 0.8em;">(by Sarthak Sonawane)</span>
+    </a>
+
+    <a href="extra_study_material.html" class="button">EXTRA <b>STUDY MATERIALS</b> (submitted via collaborations)</a>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-name">The Paper Vault</p>
+        <a href="aboutus.html" class="button about-btn">About Us & About Website</a>
+        <a href="#" class="button feedback-btn" onclick="openFeedbackPopup()">Got an Issue? Report/Feedback here!</a>
+      </div>
+    </footer>
+
+    <!-- NEW VERSION BUTTON - BOTTOM -->
+    <a href="https://papervault.github.io/vault/" class="new-version-button">
+      🚀 Go to New Version of Paper Vault (Updated for CBSE 2025-26)
+    </a>
+
+    <div class="extra-space"></div>
+  </main>
 </body>
 
 </html>
